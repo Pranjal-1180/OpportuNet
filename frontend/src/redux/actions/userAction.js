@@ -181,7 +181,7 @@ export const userEditAction = (id, updatedUserData) => async (dispatch) => {
         };
         
         const { data } = await axios.put(`/api/user/edit/${id}`, updatedUserData, config);
-        console.log('Success, received data:', data);
+       
         
         dispatch({
             type: USER_EDIT_SUCCESS,

@@ -47,7 +47,7 @@ export const jobLoadSingleAction = (id) => async (dispatch) => {
   dispatch({ type: JOB_LOAD_SINGLE_REQUEST });
   try {
     const { data } = await axios.get(`/api/job/${id}`);
-    console.log("Loaded Job Data:", data);
+    
     dispatch({
       type: JOB_LOAD_SINGLE_SUCCESS,
       payload: data,

@@ -13,7 +13,7 @@ const UploadResume = ({ userId }) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log("Uploading resume for userId:", userId);
+        
 
        
         const success = await dispatch(userUploadResumeAction(userId, file));

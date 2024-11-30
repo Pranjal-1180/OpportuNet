@@ -6,9 +6,6 @@ import CardElement from '../../component/CardElement';
 
 const UserJobsHistory = () => {
     const { user } = useSelector(state => state.userProfile);
-    
-    // Debugging: Log user data
-    console.log(user);
 
     return (
         <div style={{ }}>

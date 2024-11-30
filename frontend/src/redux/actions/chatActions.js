@@ -19,10 +19,10 @@ export const getChatHistory = (adminId, userId) => async (dispatch) => {
 
   try {
     const { data } = await axios.get(
-      `http://localhost:9000/api/chat/${adminId}/${userId}`,
+      `/api/chat/${adminId}/${userId}`,
       { withCredentials: true } // Ensures cookies are included
     );
-    console.log("get history data:", data.adminId); // Debugging
+    
     dispatch({
       type: CHAT_GET_HISTORY_SUCCESS,
       payload: data,
@@ -45,11 +45,11 @@ export const sendMessage =
 
     try {
       const { data } = await axios.post(
-        `http://localhost:9000/api/chat/${adminId}/${userId}/send`,
+        `/api/chat/${adminId}/${userId}/send`,
         { senderId, content },
         { withCredentials: true } // Ensures cookies are included
       );
-      console.log("Sent message data:", data); // Debugging
+      
       dispatch({
         type: CHAT_SEND_MESSAGE_SUCCESS,
         payload: data,
@@ -73,20 +73,20 @@ export const fetchConversations = (userId) => async (dispatch) => {
   try {
     // Dispatch request action
     dispatch({ type: FETCH_CONVERSATIONS_REQUEST });
-    console.log("Fetching conversations for user:", userId);
+    
 
     // Make API request to get conversations
     const { data } = await axios.get(
-      `http://localhost:9000/api/chat/conversations/${userId}`,
+      `/api/chat/conversations/${userId}`,
       { withCredentials: true }
     );
 
-    console.log("API response for fetchConversations:", data); // Debugging response
+    
 
     // Dispatch success action with the fetched data
     dispatch({
       type: FETCH_CONVERSATIONS_SUCCESS,
-      payload: data, // The data contains admins' details: [{ adminId, firstName }]
+      payload: data, 
     });
   } catch (error) {
     console.error("Error in fetchConversations action:", error);

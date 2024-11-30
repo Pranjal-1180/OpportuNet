@@ -135,7 +135,7 @@ exports.createUserJobsHistory = async (req, res, next) => {
 
 // Update user resume
 exports.updateUserResume = async (req, res, next) => {
-  console.log("Updating resume for user:", req.params.id);
+  
   try {
       const user = await User.findById(req.params.id);
       if (!user) {

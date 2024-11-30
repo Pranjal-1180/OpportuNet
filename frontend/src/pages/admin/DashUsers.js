@@ -18,7 +18,7 @@ const DashUsers = () => {
   const data = users && users.length > 0 ? users : [];
 
   const ViewProfileById = (e, id) => {
-    console.log(id);
+    // console.log(id);
   };
 
   const deleteUserById = (e, id) => {

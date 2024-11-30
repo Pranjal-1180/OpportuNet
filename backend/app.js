@@ -1,5 +1,3 @@
-
-
 const express = require("express");
 const http = require('http');
 const socketIO = require('socket.io');
@@ -61,12 +59,12 @@ const io = socketIO(server, {
 
 // Socket.io connection handling
 io.on('connection', (socket) => {
-    console.log('A user connected:', socket.id);
+    
 
     socket.on('joinRoom', ({ adminId, userId }) => {
         const room = `${adminId}-${userId}`;
         socket.join(room);
-        console.log(`User joined room: ${room}`);
+       
     });
 
     // Handle incoming messages
@@ -80,14 +78,14 @@ io.on('connection', (socket) => {
                 params: { adminId, userId },
                 body: { senderId, content }
             });
-            console.log('Message saved successfully:', response);
+            
         } catch (error) {
             console.error('Error saving message:', error.message);
         }
     });
 
     socket.on('disconnect', () => {
-        console.log('User disconnected:', socket.id);
+       
     });
 });
 

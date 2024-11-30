@@ -78,11 +78,11 @@ exports.sendMessage = async (req, res) => {
 // Fetch admins who have messaged the specified user
 exports.getConversations = async (req, res) => {
   const { userId } = req.params;
-  console.log("API called with userId:", userId);
+  
 
   try {
     const conversations = await Chat.find({ userId }).populate('adminId', 'firstName role');
-    console.log("Fetched conversations:", conversations);
+    
 
     if (!conversations || conversations.length === 0) {
       return res.status(404).json({ message: "No conversations found." });
@@ -94,7 +94,7 @@ exports.getConversations = async (req, res) => {
         adminId: chat.adminId._id,
         firstName: chat.adminId.firstName,
       }));
-    console.log("Filtered admins:", admins);
+    
 
     res.status(200).json(admins);
   } catch (error) {
