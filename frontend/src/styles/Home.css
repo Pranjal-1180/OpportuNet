@@ -1,0 +1,85 @@
+/* Home.css */
+
+.home-container {
+    background-color: #fafafa;
+    min-height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.filter-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.jobs-section {
+    flex: 5;
+    padding: 20px;
+}
+
+.filter-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-heading {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.location-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.location-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.location-icon {
+    color: #1976d2; /* Custom color for the location icon */
+    margin-right: 10px;
+}
+
+.no-result {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,97 @@
+/* General Styles */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .filter-card {
+    flex: 1 1 calc(50% - 20px); /* 50% width minus gap */
+    margin: 10px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-heading {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .location-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .location-list li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  .location-icon {
+    margin-right: 8px;
+    color: #1976d2;
+  }
+  
+  /* Jobs Section */
+  .jobs-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .no-result {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pagination-button {
+    padding: 5px 15px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .filter-section {
+      flex-direction: column;
+    }
+  
+    .filter-card {
+      flex: 1 1 100%; /* Full width for smaller screens */
+      margin: 10px 0;
+    }
+  
+    .jobs-section {
+      padding: 10px;
+    }
+  }
+  
