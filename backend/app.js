@@ -37,6 +37,7 @@ app.use(cors({
     credentials: true
 }));
 
+// const _dirname=path.resolve();
 // Register routes
 app.use('/api', authRoutes);
 app.use('/api', userRoutes);
@@ -45,8 +46,18 @@ app.use('/api', jobRoute);
 app.use('/api/chat', chatRoutes);
 app.use(errorHandler);
 
-// Static file serving
+
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+console.log('Resolved uploads directory:', path.join(__dirname, 'uploads'));
+
+
+// Serve frontend build files
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+});
+
+
 
 // Socket.io setup
 const server = http.createServer(app);

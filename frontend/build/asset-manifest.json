@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e4c1f1af.css",
+    "main.js": "/static/js/main.c00e2eb9.js",
+    "static/media/job_16664310.gif": "/static/media/job_16664310.017f0cc2b97e56895fe0.gif",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/jobbg.jpg": "/static/media/jobbg.667fd8d0ebae0dbf848c.jpg",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "index.html": "/index.html",
+    "main.e4c1f1af.css.map": "/static/css/main.e4c1f1af.css.map",
+    "main.c00e2eb9.js.map": "/static/js/main.c00e2eb9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4c1f1af.css",
+    "static/js/main.c00e2eb9.js"
+  ]
+}

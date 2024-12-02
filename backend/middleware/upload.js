@@ -4,7 +4,9 @@ const path = require('path');
 // Configure storage for multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'uploads/'); // Save uploads to the "uploads" directory
+        // cb(null, 'uploads/'); 
+        cb(null, path.join(__dirname, '..', 'uploads'));
+        console.log(`Saving file to ${path.join(__dirname, 'uploads')}`);
     },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}_${file.originalname}`); // Use unique filenames

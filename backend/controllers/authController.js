@@ -1,8 +1,7 @@
 
 const User = require('../models/userModel');
 const ErrorResponse = require('../utils/errorResponse');
-
-
+const path = require('path');
 
 exports.signup = async (req, res, next) => {
     const { email } = req.body;
@@ -16,7 +15,10 @@ exports.signup = async (req, res, next) => {
     // Handle resume upload if it exists
     let resumePath = null;
     if (req.file) {
-        resumePath = req.file.path;  // Store the path to the uploaded resume
+        // resumePath = req.file.path;  
+        console.log('Uploaded file path:', req.file.path);
+        // resumePath = path.relative(process.cwd(), req.file.path);
+        resumePath = path.posix.join('/uploads', path.basename(req.file.path));
     }
 
     try {

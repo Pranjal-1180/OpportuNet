@@ -134,35 +134,71 @@ exports.createUserJobsHistory = async (req, res, next) => {
 };
 
 // Update user resume
+// exports.updateUserResume = async (req, res, next) => {
+//   try {
+//       const user = await User.findById(req.params.id);
+//       if (!user) {
+//           return next(new ErrorResponse("User not found", 404));
+//       }
+//       // Save the new resume path
+//       const resumePath = req.file.path;
+
+//       // If a previous resume exists, delete it
+//       if (user.resume && fs.existsSync(user.resume)) {
+//           fs.unlinkSync(user.resume);
+//       }
+//       // Update the user resume field
+//       user.resume = resumePath;
+//       await user.save();
+
+//       res.status(200).json({
+//           success: true,
+//           message: "Resume updated successfully",
+//           user
+//       });
+      
+//   } catch (error) {
+//       // return next(error);
+//       console.error("Error updating resume:", error);
+//         res.status(500).json({ error: "Internal Server Error" });
+//   }
+// };
+
 exports.updateUserResume = async (req, res, next) => {
-  
   try {
       const user = await User.findById(req.params.id);
+
       if (!user) {
           return next(new ErrorResponse("User not found", 404));
       }
 
-      // Save the new resume path
-      const resumePath = req.file.path;
-
-      // If a previous resume exists, delete it
-      if (user.resume && fs.existsSync(user.resume)) {
-          fs.unlinkSync(user.resume);
+      // Ensure a file was uploaded
+      if (!req.file) {
+          return res.status(400).json({ success: false, message: "No file uploaded" });
       }
 
-      // Update the user resume field
+      // Normalize and save the new resume path
+      const resumePath = path.posix.join('/uploads', path.basename(req.file.path));
+
+      // Delete the previous resume if it exists
+      if (user.resume) {
+          const oldResumePath = path.join(process.cwd(), user.resume.replace(/\\/g, '/'));
+          if (fs.existsSync(oldResumePath)) {
+              fs.unlinkSync(oldResumePath);
+          }
+      }
+
+      // Update the user with the new resume path
       user.resume = resumePath;
       await user.save();
 
       res.status(200).json({
           success: true,
           message: "Resume updated successfully",
-          user
+          resume: user.resume,
       });
-      
   } catch (error) {
-      // return next(error);
       console.error("Error updating resume:", error);
-        res.status(500).json({ error: "Internal Server Error" });
+      res.status(500).json({ error: "Internal Server Error" });
   }
 };

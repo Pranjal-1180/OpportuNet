@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
@@ -233,8 +234,8 @@ const DashJobs = () => {
             getRowId={(row) => row._id}
             rows={data}
             columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5]}
+            pageSize={7}
+            rowsPerPageOptions={[7]}
             checkboxSelection
             sx={{
               "& .MuiDataGrid-columnHeaders": {

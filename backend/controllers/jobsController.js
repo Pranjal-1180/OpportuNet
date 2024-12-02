@@ -74,7 +74,7 @@ exports.showJobs = async (req, res, next) => {
     // Determine category filter
     const cat = req.query.cat;
     const categ = cat && cat !== "" ? cat : ids;
-
+    
     // Get all unique job locations
     const jobByLocation = await Job.find({}, { location: 1 });
     const uniqueLocations = [...new Set(jobByLocation.map((val) => val.location))];
@@ -82,7 +82,7 @@ exports.showJobs = async (req, res, next) => {
     const locationFilter = location && location !== "" ? location : uniqueLocations;
 
     // Enable pagination
-    const pageSize = 5;
+    const pageSize = Number(req.query.pageSize) || 5;
     const page = Number(req.query.pageNumber) || 1;
 
     // Filter jobs and count documents
