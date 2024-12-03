@@ -33,7 +33,8 @@ app.use(bodyParser.json({ limit: "5mb" }));
 app.use(bodyParser.urlencoded({ limit: "5mb", extended: true }));
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    // origin: 'http://localhost:3000',
+    origin : 'https://opportunet-8gnv.onrender.com',
     credentials: true
 }));
 
@@ -63,7 +64,8 @@ app.get('*', (req, res) => {
 const server = http.createServer(app);
 const io = socketIO(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        // origin: 'http://localhost:3000',
+        origin : 'https://opportunet-8gnv.onrender.com',
         methods: ['GET', 'POST']
     }
 });

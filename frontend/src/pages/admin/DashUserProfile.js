@@ -311,7 +311,7 @@ const DashUserProfile = () => {
           zIndex={4000}
         >
           <iframe
-            src={`http://localhost:9000${user.resume.replace(/\\/g, "/")}`}
+            src={`https://opportunet-8gnv.onrender.com${user.resume.replace(/\\/g, "/")}`}
             title="User Resume"
             style={{ width: "80%", height: "80%", border: "none" }}
           ></iframe>

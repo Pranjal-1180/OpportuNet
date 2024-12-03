@@ -18,7 +18,7 @@ const UserInfoDashboard = () => {
   const [showViewer, setShowViewer] = useState(false);
   const [resumePath, setResumePath] = useState(null); // Local state for the resume path
 
-  const baseURL = "http://localhost:9000";
+  const baseURL = "https://opportunet-8gnv.onrender.com";
 
   useEffect(() => {
     dispatch(userProfileAction()); // Fetch user data on component load

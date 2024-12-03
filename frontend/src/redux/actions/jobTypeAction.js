@@ -94,7 +94,7 @@ export const jobTypeUpdateAction = (id, jobTypeName) => async (dispatch, getStat
 
   try {
     const { data } = await axios.put(
-      `http://localhost:9000/api/type/update/${id}`,
+      `https://opportunet-8gnv.onrender.com/api/type/update/${id}`,
       { jobTypeName },
       {
         withCredentials: true, // Include cookies in the request
