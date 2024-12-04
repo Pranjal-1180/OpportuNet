@@ -56,7 +56,7 @@ const AppliedJobDetail = () => {
           </div>
         )}
       </div>
-      <Footer />
+     
     </div>
   );
 };
