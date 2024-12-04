@@ -13,7 +13,7 @@ const DashCategory = () => {
   const dispatch = useDispatch();
   const theme = useTheme();
   useEffect(() => {
-    dispatch(jobTypeLoadAction()); // Load job types on component mount
+    dispatch(jobTypeLoadAction()); 
   }, [dispatch]);
 
   const { jobType, loading } = useSelector((state) => state.jobTypeAll);
@@ -74,27 +74,27 @@ const DashCategory = () => {
   const styles = {
     header: {
       color: "#127ce6",
-      paddingBottom: "16px",
-      fontSize: "1.5rem",
+      paddingBottom: "11px",
+      fontSize: "1.3rem",
       fontWeight: "bold",
     },
     createButtonContainer: {
       display: "flex",
       justifyContent: "flex-start",
-      paddingBottom: "16px",
+      paddingBottom: "14px",
     },
     createButton: {
       display: "flex",
       alignItems: "center",
       backgroundColor: "#2ecc71",
       color: "white",
-      padding: "10px 16px",
+      padding: "6px 12px",
       borderRadius: "8px",
       textDecoration: "none",
       border: "none",
       cursor: "pointer",
       fontWeight: "bold",
-      fontSize: "1rem",
+      fontSize: "0.8rem",
       transition: "background-color 0.3s",
     },
     createButtonHover: {
@@ -118,30 +118,30 @@ const DashCategory = () => {
       marginTop: "10px",
     },
     editButton: {
-      padding: "8px 12px",
+      padding: "6px 10px",
       backgroundColor: "#3498db",
       color: "white",
       border: "none",
       borderRadius: "6px",
       cursor: "pointer",
       fontWeight: "bold",
-      fontSize: "0.9rem",
+      fontSize: "0.8rem",
     },
     deleteButton: {
-      padding: "8px 12px",
+      padding: "6px 10px",
       backgroundColor: "#e74c3c",
       color: "white",
       border: "none",
       borderRadius: "6px",
       cursor: "pointer",
       fontWeight: "bold",
-      fontSize: "0.9rem",
+      fontSize: "0.8rem",
     },
   };
 
   return (
     <div>
-      <h2 style={styles.header}>Job Categories</h2>
+      <h3 style={styles.header}>Job Categories</h3>
       <div style={styles.createButtonContainer}>
         <button
           style={styles.createButton}
@@ -176,12 +176,12 @@ const DashCategory = () => {
               "& .MuiDataGrid-columnHeaders": {
                 backgroundColor: "#127ce6",
                 color:theme.palette.mode==="dark"?"white": "black",
-                fontSize: "18px",
+                fontSize: "16px",
                 fontWeight: "bold",
                 textTransform: "uppercase",
               },
               "& .MuiDataGrid-row": {
-                fontSize: "16px",
+                fontSize: "14px",
                 backgroundColor:theme.palette.mode==="dark"?"black": "white",
               },
               "& .MuiTablePagination-displayedRows": {

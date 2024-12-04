@@ -18,21 +18,22 @@
 
 .jobs-section {
     flex: 5;
-    padding: 20px;
+    padding: 16px;
 }
 
 .filter-card {
     background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px; 
+    margin-bottom: 16px; 
+    border-radius: 8px; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .filter-heading {
-    color: #333;
+    font-size: 16px; 
+    margin-bottom: 8px; 
     font-weight: 600;
-    margin-bottom: 10px;
+    color: #333;
 }
 
 .location-list {
@@ -41,14 +42,15 @@
 }
 
 .location-list li {
+    margin-bottom: 8px; 
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .location-icon {
-    color: #1976d2; /* Custom color for the location icon */
-    margin-right: 10px;
+    font-size: 18px; 
+    margin-right: 6px; 
+    color: #1976d2;
 }
 
 .no-result {

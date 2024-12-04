@@ -58,14 +58,14 @@ const SingleJob = () => {
   return (
     <div style={{ backgroundColor: bgColor, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <Navbar />
-      <div style={{ flex: 1, padding: "30px", display: "flex", gap: "30px", justifyContent: "center" }}>
+      <div style={{ flex: 1, padding: "30px", display: "flex", gap: "30px", justifyContent: "center", marginTop:"40px" }}>
         {loading ? (
           <LoadingBox />
         ) : (
           <>
             {/* Main job details section */}
             <div style={{ flex: 3, padding: "20px", backgroundColor: cardBgColor, borderRadius: "10px", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
-              <h3 style={{ color: textColor, fontSize: "1.8rem", marginBottom: "15px" }}>{singleJob?.title}</h3>
+              <h4 style={{ color: textColor, fontSize: "1.3rem", marginBottom: "15px" }}>{singleJob?.title}</h4>
               <p style={{ color: textColor, fontSize: "1.1rem" }}>
                 <strong>Salary:</strong> ${singleJob?.salary}
               </p>
@@ -104,7 +104,7 @@ const SingleJob = () => {
             {/* Applicants card section */}
             {userInfo?.role === 1 && (
               <div style={{ flex: 1, padding: "20px", borderLeft: `1px solid ${borderColor}`, backgroundColor: cardBgColor, borderRadius: "10px", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
-                <h4 style={{ color: textColor, marginBottom: "20px", fontSize: "1.5rem" }}>Applicants</h4>
+                <h4 style={{ color: textColor, marginBottom: "20px", fontSize: "1.3rem" }}>Applicants</h4>
                 {applicantsLoading ? (
                   <LoadingBox />
                 ) : (
@@ -114,7 +114,7 @@ const SingleJob = () => {
                         <div
                           key={applicant._id}
                           style={{
-                            padding: "15px",
+                            padding: "12px",
                             borderRadius: "8px",
                             backgroundColor: cardBgColor,
                             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
@@ -133,7 +133,7 @@ const SingleJob = () => {
                             to={`/admin/user/profile/${applicant._id}`}
                             style={{ textDecoration: "none", color: theme.palette.primary.main }}
                           >
-                            <h5 style={{ margin: 0, fontSize: "1.1rem" }}>
+                            <h5 style={{ margin: 0, fontSize: "1rem" }}>
                               {applicant.firstName} {applicant.lastName}
                             </h5>
                           </Link>

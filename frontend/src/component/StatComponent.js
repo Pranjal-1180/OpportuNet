@@ -8,8 +8,8 @@ const StatComponent = ({ value, icon, description, money }) => {
       style={{
         backgroundColor: theme.palette.mode==="dark"?"black":"#ffffff",
         width: "100%",
-        maxWidth: "650px",
-        height: "300px", 
+        maxWidth: "500px",
+        height: "200px", 
         padding: "16px",
         borderRadius: "8px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",

@@ -19,7 +19,7 @@ const HeaderTop = ({ onSidebarToggle, isSidebarCollapsed }) => {
   return (
     <div
       style={{
-        backgroundColor: theme.palette.mode==="light"?"#7e60bf":theme.palette.background.default, // Dynamic background based on theme
+        backgroundColor: theme.palette.mode==="light"?"#7e60bf":theme.palette.background.default, 
         padding: "10px 16px",
         color: theme.palette.mode === "light" ? "white" : theme.palette.text.primary,
         position: "fixed",
@@ -31,7 +31,7 @@ const HeaderTop = ({ onSidebarToggle, isSidebarCollapsed }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        paddingLeft: isSidebarCollapsed ? "150px" : "250px",
+        paddingLeft: isSidebarCollapsed ? "120px" : "160px",
         transition: "padding-left 0.3s ease",
       }}
     >

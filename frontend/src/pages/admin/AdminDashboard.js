@@ -65,14 +65,14 @@ const AdminDashboard = () => {
   const jobCategoryCount = jobCategories.length;
 
   return (
-    <div style={{ padding: "20px", backgroundColor: theme.palette.mode==="dark"?"#3C3D37":"#edeff0" }}>
-      <h1 style={{ color: "#127de6", paddingBottom: "20px" }}>Dashboard</h1>
+    <div style={{ padding: "10px", backgroundColor: theme.palette.mode==="dark"?"#3C3D37":"#edeff0" }}>
+      <h3 style={{ color: "#127de6", paddingBottom: "20px" }}>Dashboard</h3>
 
       <div
         style={{
           display: "grid",
-          gap: "26px",
-          gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
+          gap: "23px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
           justifyContent: "center", // Centers the grid content
         }}
       >
@@ -80,7 +80,7 @@ const AdminDashboard = () => {
           value={loading ? "Loading..." : adminCount}
           icon={
             <SupervisorAccountIcon
-              style={{ color: "#87A2FF", fontSize: "30px" }}
+              style={{ color: "#87A2FF", fontSize: "26px" }}
             />
           }
           description="Administrators"
@@ -88,13 +88,13 @@ const AdminDashboard = () => {
         />
         <StatComponent
           value={jobsLoading ? "Loading..." : jobsCount}
-          icon={<WorkIcon style={{ color: "#87A2FF", fontSize: "30px" }} />}
+          icon={<WorkIcon style={{ color: "#87A2FF", fontSize: "26px" }} />}
           description="Jobs registered"
           money=""
         />
         <StatComponent
           value={categoriesLoading ? "Loading..." : jobCategoryCount}
-          icon={<CategoryIcon style={{ color: "#87A2FF", fontSize: "30px" }} />}
+          icon={<CategoryIcon style={{ color: "#87A2FF", fontSize: "26px" }} />}
           description="Job Categories"
           money=""
         />

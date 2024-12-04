@@ -11,15 +11,11 @@ const AdminJobDetail = () => {
   const dispatch = useDispatch();
   const { singleJob, loading } = useSelector((state) => state.singleJob);
   const { id } = useParams();
-  const theme = useTheme(); // Access theme
+  const theme = useTheme();
 
   useEffect(() => {
     dispatch(jobLoadSingleAction(id));
   }, [id]);
-
-    // Log the job details to verify
-   
-   
 
   // Dynamic styles based on theme mode
   const bgColor = theme.palette.mode === "light" ? "#fafafa" : "#303030";
@@ -39,9 +35,9 @@ const AdminJobDetail = () => {
               <div
                 style={{ border: `1px solid ${borderColor}`, padding: "20px" }}
               >
-                <h3 style={{ color: textColor }}>
+                <h4 style={{ color: textColor }}>
                   {singleJob && singleJob.title}
-                </h3>
+                </h4>
                 <p style={{ color: textColor }}>
                   <strong>Salary:</strong> ${singleJob && singleJob.salary}
                 </p>

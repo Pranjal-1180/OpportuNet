@@ -26,8 +26,8 @@ const DashJobs = () => {
   const styles = {
     header: {
       color: "#127ce6",
-      paddingBottom: "24px",
-      fontSize: "1.5rem",
+      paddingBottom: "18px",
+      fontSize: "1.2rem",
       fontWeight: "bold",
     },
     createButtonContainer: {
@@ -40,12 +40,12 @@ const DashJobs = () => {
       alignItems: "center",
       backgroundColor: "#4caf50",
       color: "white",
-      padding: "10px 16px",
+      padding: "8px 11px",
       borderRadius: "8px",
       border: "none",
       cursor: "pointer",
       fontWeight: "bold",
-      fontSize: "1rem",
+      fontSize: "0.8rem",
       transition: "background-color 0.3s ease, transform 0.2s ease",
       textDecoration: "none",
     },
@@ -57,15 +57,15 @@ const DashJobs = () => {
       display: "flex",
       justifyContent: "space-between",
       width: "100%",
-      gap: "10px",
+      gap: "7px",
       marginTop: "10px",
     },
     actionButton: {
       border: "none",
-      padding: "8px 15px",
+      padding: "6px 13px",
       borderRadius: "8px",
       cursor: "pointer",
-      fontSize: "14px",
+      fontSize: "12px",
       fontWeight: "bold",
       color: "white",
       textDecoration: "none",
@@ -124,26 +124,26 @@ const DashJobs = () => {
     {
       field: "user",
       headerName: "User",
-      width: 150,
+      width: 130,
       renderCell: (params) => (
         <span>{params.row.user?.firstName || "N/A"}</span>
       ),
     },
-    {
-      field: "available",
-      headerName: "Available",
-      width: 150,
-      renderCell: (values) => (values.row.available ? "Yes" : "No"),
-    },
+    // {
+    //   field: "available",
+    //   headerName: "Available",
+    //   width: 10,
+    //   renderCell: (values) => (values.row.available ? "Yes" : "No"),
+    // },
     {
       field: "salary",
       headerName: "Salary",
-      width: 150,
+      width: 130,
       renderCell: (values) => "$" + values.row.salary,
     },
     {
       field: "Actions",
-      width: 300,
+      width: 250,
       renderCell: (values) => (
         <div style={styles.actionsContainer}>
           <button
@@ -204,7 +204,7 @@ const DashJobs = () => {
 
   return (
     <div>
-      <h2 style={styles.header}>Jobs List</h2>
+      <h3 style={styles.header}>Jobs List</h3>
       <div style={styles.createButtonContainer}>
         <button
           style={styles.createButton}
@@ -241,7 +241,7 @@ const DashJobs = () => {
               "& .MuiDataGrid-columnHeaders": {
                 backgroundColor: "#127ce6",
                 color:theme.palette.mode==="dark"?"white": "black",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "bold",
                 textTransform: "uppercase",
               },

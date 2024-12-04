@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeaderTop from "./HeaderTop";
-import SidebarAdm from "./Sidebar"; // Assuming SidebarAdm is the sidebar component
+import SidebarAdm from "./Sidebar"; 
 
 const Layout = (WrappedComponent) => {
   return function WithLayout(props) {
@@ -11,35 +11,35 @@ const Layout = (WrappedComponent) => {
     };
 
     // Determine if the screen width is small for responsive design
-    const isMobile = window.innerWidth <= 768; // You can adjust the breakpoint as needed
+    const isMobile = window.innerWidth <= 768; 
 
     const layoutStyles = {
       display: "flex",
       minHeight: "100vh",
-      flexDirection: isMobile ? "column" : "row", // Stack vertically on small screens
+      flexDirection: isMobile ? "column" : "row", 
     };
 
     const sidebarStyles = {
-      width: isSidebarCollapsed ? "150px" : "250px",
+      width: isSidebarCollapsed ? "120px" : "160px",
       transition: "width 0.3s",
       position: "fixed",
       top: 0,
       left: 0,
       bottom: 0,
       zIndex: 1000,
-      overflowY: "auto", // Ensure sidebar is scrollable if needed
-      ...(isMobile && { width: "0", display: "none" }), // Hide sidebar on small screens
+      overflowY: "auto", 
+      ...(isMobile && { width: "0", display: "none" }), 
     };
 
     const contentStyles = {
       flexGrow: 1,
       backgroundColor: "#edeff0",
-      marginLeft: isSidebarCollapsed ? "150px" : "250px",
+      marginLeft: isSidebarCollapsed ? "120px" : "160px",
       transition: "margin-left 0.3s",
       paddingTop: "66px", 
       padding: "16px",
       width: "100%",
-      ...(isMobile && { marginLeft: 0 }), // Full width on small screens
+      ...(isMobile && { marginLeft: 0 }), 
     };
 
     return (

@@ -9,7 +9,7 @@ const UserJobsHistory = () => {
 
     return (
         <div style={{ }}>
-            <h2 style={{ color: "#2196f3",marginTop:'20px',marginLeft:"0px",fontSize: "26px", }}>Jobs History</h2>
+            <h3 style={{ color: "#2196f3",marginTop:'20px',marginLeft:"0px" }}>Jobs History</h3>
             <div>
                 {
                     user && user.jobsHistory && user.jobsHistory.length > 0 ? (

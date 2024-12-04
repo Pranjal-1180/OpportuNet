@@ -53,9 +53,9 @@ const UserInfoDashboard = () => {
 
   return (
     <div>
-      <h1
+      <h3
         style={{
-          fontSize: "26px",
+          
           fontWeight: "600",
           color: "#219ff2",
           marginBottom: "30px",
@@ -65,11 +65,11 @@ const UserInfoDashboard = () => {
         }}
       >
         My Profile
-      </h1>
+      </h3>
 
       <div
         style={{
-          fontSize: "20px",
+          fontSize: "16px",
           backgroundColor:
             theme.palette.mode === "dark" ? "#3C3D37" : "#ffffff",
           padding: "25px",
@@ -78,16 +78,16 @@ const UserInfoDashboard = () => {
           textAlign: "left",
         }}
       >
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>First Name:</strong> <span>{user?.firstName}</span>
         </div>
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>Last Name:</strong> <span>{user?.lastName}</span>
         </div>
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>Email:</strong> <span>{user?.email}</span>
         </div>
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>Status:</strong>{" "}
           <span
             style={{
@@ -98,21 +98,21 @@ const UserInfoDashboard = () => {
             {user?.role === 0 ? "Regular User" : "Admin"}
           </span>
         </div>
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>Education:</strong> <span>{user?.education}</span>
         </div>
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>Percentage:</strong> <span>{user?.percentage}</span>
         </div>
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>Address:</strong> <span>{user?.address}</span>
         </div>
-        <div style={{ marginBottom: "15px" }}>
+        <div style={{ marginBottom: "12px" }}>
           <strong>Phone no.:</strong> <span>{user?.phone}</span>
         </div>
 
         {resumePath && (
-          <div style={{ marginBottom: "15px" }}>
+          <div style={{ marginBottom: "12px" }}>
             <strong>Resume:</strong>{" "}
             <a
               onClick={openResumeViewer}
@@ -137,12 +137,12 @@ const UserInfoDashboard = () => {
             style={{
               backgroundColor: theme.palette.primary.main,
               color: "#ffffff",
-              padding: "12px 25px",
+              padding: "8px 20px",
               borderRadius: "8px",
               border: "none",
               fontWeight: "600",
               cursor: "pointer",
-              fontSize: "16px",
+              fontSize: "14px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
               transition: "transform 0.2s ease, background-color 0.3s ease",
             }}

@@ -35,14 +35,12 @@ const Navbar = () => {
     dispatch(toggleActionTheme());
   };
 
- 
-
   return (
     <header
       style={{
         position: "fixed",
         backgroundColor: mode === "light" ? "#7E60BF" : "#333",
-        padding: "10px 20px",
+        padding: "8px 14px",
         display: "flex",
          width: "100%",
         justifyContent: "space-between",
@@ -55,7 +53,7 @@ const Navbar = () => {
       <div style={{ display: "flex", alignItems: "center",gap:"10px" }}>
       <img
             style={{
-             width:"40px",
+             width:"30px",
               textAlign: "center",
               borderRadius: "50%",
               transition: "all ease-out .5s",
@@ -64,7 +62,7 @@ const Navbar = () => {
             src={logoDashboard}
             alt="logo dashboard"
           />
-        <h1 style={{ fontSize: "20px", fontWeight: "bold", margin: 0 }}>
+        <h1 style={{ fontSize: "19px", fontWeight: "bold", margin: 0 }}>
           <Link to="/" style={{ color: "white", textDecoration: "none" }}>
             OpportuNet
           </Link>

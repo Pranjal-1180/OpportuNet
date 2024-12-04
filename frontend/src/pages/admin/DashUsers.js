@@ -40,10 +40,10 @@ const DashUsers = () => {
   const buttonStyles = {
     base: {
       border: "none",
-      padding: "10px 18px",
+      padding: "8px 15px",
       borderRadius: "6px",
       cursor: "pointer",
-      fontSize: "14px",
+      fontSize: "12px",
       fontWeight: "bold",
       transition: "background-color 0.3s, transform 0.2s",
     },
@@ -52,14 +52,14 @@ const DashUsers = () => {
   };
 
   const columns = [
-    { field: "_id", headerName: "User ID", flex: 1, minWidth: 150, editable: true },
-    { field: "email", headerName: "Email", flex: 1, minWidth: 200 },
-    { field: "role", headerName: "User Status", flex: 1, renderCell: (params) => (params.row.role === 1 ? "Recruiter" : "Candidate") },
+    { field: "_id", headerName: "User ID", flex: 1, minWidth: 100, editable: true },
+    { field: "email", headerName: "Email", flex: 1, minWidth: 180 },
+    { field: "role", headerName: "User Status", flex: 1,minWidth: 150, renderCell: (params) => (params.row.role === 1 ? "Recruiter" : "Candidate") },
     {
       field: "createdAt",
       headerName: "Creation Date",
       flex: 1,
-      minWidth: 200,
+      minWidth: 180,
       renderCell: (params) => moment(params.row.createdAt).format("YYYY-MM-DD HH:mm:ss"),
     },
     {
@@ -101,23 +101,23 @@ const DashUsers = () => {
         // backgroundColor:theme.palette.mode==="dark"?"black":"#edeff0"
       }}
     >
-      <h2 style={{ color: "#127ce6",marginTop:20,marginLeft:0}}>All Users</h2>
+      <h3 style={{ color: "#127ce6",marginTop:20,marginLeft:0}}>All Users</h3>
       <div style={{ height: "550px", width: "100%", overflow: "auto" }}>
         <DataGrid
           sx={{
             "& .MuiDataGrid-columnHeaders": {
               backgroundColor: "#127ce6",
               color: theme.palette.mode === "dark" ? "white" : theme.palette.text.primary,
-              fontSize: "20px",
+              fontSize: "16px",
               fontWeight: "bold",
               textTransform: "uppercase",
             },
-            "& .MuiDataGrid-cell": { fontSize: "16px", padding: "10px",backgroundColor:theme.palette.mode==="dark"?"black":"white" },
+            "& .MuiDataGrid-cell": { fontSize: "14px", padding: "10px",backgroundColor:theme.palette.mode==="dark"?"black":"white" },
             "& .MuiDataGrid-row:hover": { backgroundColor: "#e0f7fa" },
             "& .MuiDataGrid-footerContainer": { backgroundColor: "#f3e5f5" },
             "@media (max-width: 600px)": {
               "& .MuiDataGrid-columnHeaders": { fontSize: "14px" },
-              "& .MuiDataGrid-cell": { fontSize: "12px" },
+              "& .MuiDataGrid-cell": { fontSize: "10px" },
             },
           }}
           getRowId={(row) => row._id}

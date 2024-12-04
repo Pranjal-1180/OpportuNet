@@ -65,8 +65,8 @@ const DashCreateCategory = () => {
             marginTop:'30px'
         },
         heading: {
-            paddingBottom: '16px',
-            fontSize: '1.5rem',
+            paddingBottom: '15px',
+            fontSize: '1.3rem',
             fontWeight: 'bold',
             color: '#333333',
         },
@@ -76,7 +76,7 @@ const DashCreateCategory = () => {
             width: '100%',
             borderRadius: '8px',
             border: '1px solid #ddd',
-            fontSize: '1rem',
+            fontSize: '0.8rem',
             transition: 'border-color 0.3s',
         },
         inputFocus: {
@@ -93,7 +93,7 @@ const DashCreateCategory = () => {
             borderRadius: '8px',
             backgroundColor: '#127ce6',
             color: '#ffffff',
-            fontSize: '1rem',
+            fontSize: '0.8rem',
             fontWeight: 'bold',
             border: 'none',
             cursor: 'pointer',
@@ -111,7 +111,7 @@ const DashCreateCategory = () => {
                 className="form_style border-style"
                 style={styles.form}
             >
-                <h2 style={styles.heading}>Create a Category</h2>
+                <h1 style={styles.heading}>Create a Category</h1>
                 <input
                     style={{
                         ...styles.input,

@@ -25,7 +25,6 @@ const ChatComponent = ({ adminList, userId, isUserView, onClose }) => {
       dispatch(clearChatMessages());
       dispatch(getChatHistory(selectedAdminId, userId));
     } else {
-      // Reset local messages when no admin is selected
       setLocalMessages([]);
     }
   }, [dispatch, selectedAdminId, userId]);
@@ -43,7 +42,6 @@ const ChatComponent = ({ adminList, userId, isUserView, onClose }) => {
   const handleSendMessage = () => {
     if (!newMessage.trim() || !selectedAdminId) return;
 
-    // const senderId = isUserView ? userId : selectedAdminId;
     const senderId = isUserView ? userId : selectedAdminId;
     const newMessageObject = {
       senderId: { _id: senderId },
@@ -73,7 +71,7 @@ const ChatComponent = ({ adminList, userId, isUserView, onClose }) => {
       position: "relative",
     },
     adminList: {
-      width: "35%",
+      width: "25%",
       borderRight: "1px solid #ddd",
       padding: "15px",
       backgroundColor: "#f1f1f1",
@@ -81,7 +79,7 @@ const ChatComponent = ({ adminList, userId, isUserView, onClose }) => {
       overflowY: "auto",
     },
     chatSection: {
-      width: "65%",
+      width: "75%",
       padding: "15px",
       display: "flex",
       flexDirection: "column",
@@ -101,32 +99,32 @@ const ChatComponent = ({ adminList, userId, isUserView, onClose }) => {
       alignSelf: isSender ? "flex-end" : "flex-start",
       backgroundColor: isSender ? "#3498db" : "#ecf0f1",
       color: isSender ? "#ffffff" : "#333",
-      padding: "10px",
+      padding: "7px",
       borderRadius: isSender ? "12px 12px 0 12px" : "12px 12px 12px 0",
-      margin: "5px 0",
-      maxWidth: "60%",
+      margin: "3px 0",
+      maxWidth: "45%",
       wordWrap: "break-word",
       boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
     }),
     inputContainer: {
       display: "flex",
       alignItems: "center",
-      marginTop: "10px",
+      marginTop: "6px",
     },
     input: {
       flex: 1,
       padding: "10px",
       borderRadius: "8px",
       border: "1px solid #ccc",
-      fontSize: "16px",
+      fontSize: "10px",
     },
     sendButton: {
       marginLeft: "10px",
-      padding: "10px 20px",
+      padding: "8px 17px",
       borderRadius: "8px",
       backgroundColor: "#3498db",
       color: "white",
-      fontSize: "16px",
+      fontSize: "14px",
       fontWeight: "bold",
       border: "none",
       cursor: "pointer",
@@ -138,21 +136,21 @@ const ChatComponent = ({ adminList, userId, isUserView, onClose }) => {
       left: "10px",
       backgroundColor: "#e74c3c",
       color: "white",
-      padding: "8px 12px",
+      padding: "6px 10px",
       borderRadius: "8px",
       border: "none",
       cursor: "pointer",
       fontWeight: "bold",
-      fontSize: "16px",
-      height:"40px",
-      width:"80px"
+      fontSize: "14px",
+      height:"28px",
+      width:"60px"
     },
   };
 
   return (
     <div style={styles.container}>
       <div style={styles.adminList}>
-        <h3 style={{ margin: "0 0 15px 0", color: "#7E60BF" }}>Recruiters who have messaged you</h3>
+        <h4 style={{ margin: "0 0 15px 0", color: "#7E60BF" }}>Recruiters who have messaged you</h4>
         {adminList.map((admin) => (
           <div
             key={admin.adminId}

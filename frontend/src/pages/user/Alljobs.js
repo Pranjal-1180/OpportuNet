@@ -33,7 +33,7 @@ const AllJobs = () => {
       }}
     >
       <div style={{ flex: "1" }}>
-        <h2 style={{ color: headingColor, marginTop:"20px",marginLeft:"0px",fontSize: "26px", }}>All Job Listings</h2>
+        <h3 style={{ color: headingColor, marginTop:"20px",marginLeft:"0px", }}>All Job Listings</h3>
         <div>
           {loading ? (
             <LoadingBox />

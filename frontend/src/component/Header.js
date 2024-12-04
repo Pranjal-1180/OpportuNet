@@ -32,7 +32,7 @@ const Header = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "300px",
+        minHeight: "250px",
         backgroundImage: `url(${headerImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -56,8 +56,8 @@ const Header = () => {
       >
         <button
           style={{
-            padding: "15px 30px",
-            fontSize: "18px",
+            padding: "13px 26px",
+            fontSize: "14px",
             fontWeight: "bold",
             backgroundColor: "#87A2FF",
             color: "white",
@@ -81,8 +81,8 @@ const Header = () => {
         </button>
         <button
           style={{
-            padding: "15px 30px",
-            fontSize: "18px",
+            padding: "13px 26px",
+            fontSize: "14px",
             fontWeight: "bold",
             backgroundColor: "#87A2FF",
             color: "white",

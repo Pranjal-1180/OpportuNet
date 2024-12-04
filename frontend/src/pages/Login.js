@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
@@ -71,14 +72,14 @@ const LogIn = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            width: "500px",
+            width: "350px",
             height: "380px",
             border: "1px solid #ccc",
-            padding: "20px",
+            padding: "15px",
             borderRadius: "8px",
           }}
         >
-          <h2 style={{ textAlign: "center", fontSize: "26px" }}>Log In</h2>
+          <h2 style={{ textAlign: "center", fontSize: "20px" }}>Log In</h2>
           <input
             type="email"
             placeholder="E-mail"
@@ -86,12 +87,12 @@ const LogIn = () => {
             onChange={(e) => setEmail(e.target.value)}
             style={{
               marginBottom: "15px",
-              padding: "10px",
+              padding: "8px",
               width: "100%",
               height: "40px",
               border: "1px solid #ccc",
               borderRadius: "4px",
-              fontSize:"16px"
+              fontSize:"14px"
             }}
           />
           {errors.email && (
@@ -106,12 +107,12 @@ const LogIn = () => {
             onChange={(e) => setPassword(e.target.value)}
             style={{
               marginBottom: "15px",
-              padding: "10px",
+              padding: "8px",
               width: "100%",
               border: "1px solid #ccc",
               borderRadius: "4px",
               height: "40px",
-              fontSize:"16px"
+              fontSize:"14px"
             }}
           />
           {errors.password && (
@@ -122,7 +123,7 @@ const LogIn = () => {
           <button
             type="submit"
             style={{
-              padding: "10px 15px",
+              padding: "6px 12px",
               backgroundColor: "#3f51b5",
               color: "#fff",
               border: "none",
@@ -130,7 +131,7 @@ const LogIn = () => {
               cursor: "pointer",
               marginBottom: "15px",
               marginTop: "15px",
-              fontSize: "18px",
+              fontSize: "14px",
             }}
           >
             Log In
@@ -138,7 +139,7 @@ const LogIn = () => {
 
           {/* New User Registration Option */}
           <div style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "18px" }}>New User? </span>
+            <span style={{ fontSize: "14px" }}>New User? </span>
             <button
               type="button"
               onClick={() => navigate("/register")}
@@ -148,7 +149,7 @@ const LogIn = () => {
                 color: "#3f51b5",
                 cursor: "pointer",
                 textDecoration: "underline",
-                fontSize: "18px",
+                fontSize: "14px",
               }}
             >
               Register

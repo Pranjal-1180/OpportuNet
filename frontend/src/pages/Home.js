@@ -56,10 +56,11 @@ const Home = () => {
             style={{
               backgroundColor: theme.palette.background.paper, // Card background
               color:  theme.palette.mode === "dark" ? "white" : theme.palette.text.primary, // Text color
+              padding: "16px",
             }}
           >
             <h4 style={{
-              color: theme.palette.text.primary,
+              color: theme.palette.text.primary, fontSize: "16px", marginBottom: "8px", 
             }}className="filter-heading">Filter job by category</h4>
             <SelectComponent
               handleChangeCategory={handleChangeCategory}
@@ -73,22 +74,23 @@ const Home = () => {
             style={{
               backgroundColor: theme.palette.background.paper,
               color: theme.palette.text.primary,
+              padding: "16px", 
             }}
           >
             <h4 style={{
-              color: theme.palette.text.primary,
+              color: theme.palette.text.primary,fontSize: "16px", marginBottom: "8px",
             }} className="filter-heading">Filter job by location</h4>
             <ul className="location-list">
               {setUniqueLocation &&
                 setUniqueLocation.map((location, i) => (
-                  <li key={i}>
+                  <li key={i} style={{ marginBottom: "8px" }}>
                     <LocationOnIcon
                       className="location-icon"
-                      style={{ color:theme.palette.mode === "dark"? "#2196f3":theme.palette.primary.main}}
+                      style={{ color:theme.palette.mode === "dark"? "#2196f3":theme.palette.primary.main,fontSize: "18px", marginRight: "6px",}}
                     />
                     <Link
                       to={`/search/location/${location}`}
-                      style={{ color:theme.palette.mode === "dark"? "#2196f3":theme.palette.primary.main }}
+                      style={{ color:theme.palette.mode === "dark"? "#2196f3":theme.palette.primary.main,fontSize: "14px",  }}
                     >
                       {location}
                     </Link>

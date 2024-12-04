@@ -4,99 +4,12 @@ import { userSignUpAction } from "../redux/actions/userAction";
 import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
 import { useNavigate } from "react-router-dom";
-
-const styles = {
-  navbar: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 1000,
-  },
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "100px",
-    marginBottom: "100px",
-    backgroundColor: "#f5f5f5",
-    minHeight: "calc(100vh - 200px)",
-  },
-  form: {
-    backgroundColor: "#fff",
-    padding: "40px",
-    borderRadius: "8px",
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-    width: "800px",
-  },
-  header: {
-    textAlign: "center",
-    marginBottom: "20px",
-  },
-  icon: {
-    fontSize: "40px",
-    marginBottom: "10px",
-    color: "#3f51b5",
-  },
-  inputGroup: {
-    marginBottom: "20px",
-  },
-  label: {
-    display: "block",
-    marginBottom: "5px",
-    fontSize: "18px",
-  },
-  input: {
-    width: "100%",
-    padding: "12px",
-    borderRadius: "4px",
-    border: "1px solid #ccc",
-    fontSize: "18px",
-  },
-  select: {
-    width: "100%",
-    padding: "12px",
-    borderRadius: "4px",
-    border: "1px solid #ccc",
-    fontSize: "18px",
-  },
-  button: {
-    width: "100%",
-    padding: "12px",
-    backgroundColor: "#3f51b5",
-    color: "#fff",
-    border: "none",
-    borderRadius: "4px",
-    cursor: "pointer",
-    fontSize: "20px",
-  },
-  linkButton: {
-    backgroundColor: "transparent",
-    border: "none",
-    color: "#3f51b5",
-    cursor: "pointer",
-    fontSize: "18px",
-    textDecoration: "underline",
-  },
-  footer: {
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: "60px",
-    backgroundColor: "#3f51b5",
-    zIndex: 1000,
-  },
-  errorText: {
-    color: "red",
-    fontSize: "12px",
-  },
-};
+import { useTheme } from "@mui/material/styles";
 
 const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const theme = useTheme();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -110,6 +23,75 @@ const Register = () => {
     resume: null,
   });
 
+  const styles = {
+    navbar : {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100%",
+      zIndex: 1000,
+      backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#ffffff",
+      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    },
+    container: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      marginTop: "40px",
+      // marginBottom: "80px",
+      backgroundColor: theme.palette.mode === "dark" ? "#3a3b39" : "#edeff0",
+      color: theme.palette.mode === "dark" ? "#FFFFFF" : "#000000",
+      minHeight: "calc(100vh - 160px)",
+    },
+    form: {
+      backgroundColor: theme.palette.mode === "dark" ? "#424242" : "#FFFFFF",
+      color: theme.palette.mode === "dark" ? "#FFFFFF" : "#000000",
+      padding: "20px",
+      borderRadius: "6px",
+      boxShadow: theme.palette.mode === "dark"
+        ? "0px 0px 8px rgba(255, 255, 255, 0.2)"
+        : "0px 0px 8px rgba(0, 0, 0, 0.1)",
+      width: "600px",
+      marginTop:"60px"
+    },
+    label: {
+      color: theme.palette.mode === "dark" ? "#FFFFFF" : "#000000",
+      marginBottom: "6px",
+      // marginTop:"10px",
+      fontSize: "14px",
+    },
+    input: {
+      backgroundColor: theme.palette.mode === "dark" ? "#555555" : "#FFFFFF",
+      color: theme.palette.mode === "dark" ? "#FFFFFF" : "#000000",
+      border: theme.palette.mode === "dark" ? "1px solid #777777" : "1px solid #ccc",
+      padding: "8px",
+      borderRadius: "4px",
+      width: "100%",
+      fontSize: "14px",
+    },
+    button: {
+      backgroundColor: theme.palette.mode === "dark" ? "#2196f3" : "#3f51b5",
+      color: theme.palette.mode === "dark" ? "#FFFFFF" : "#FFFFFF",
+      border: "none",
+      padding: "10px",
+      borderRadius: "4px",
+      cursor: "pointer",
+      fontSize: "16px",
+      width: "100%",
+      marginBottom: "10px",
+    },
+    header : {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: "20px", 
+      marginTop:"10px"
+    },
+    
+  };
+
+ 
   const [errors, setErrors] = useState({});
 
   const validate = () => {
@@ -357,6 +339,16 @@ const Register = () => {
           <button type="submit" style={styles.button}>
             Register
           </button>
+          <div style={{textAlign: "center",fontSize:"14px",}}>
+                Already registered?{' '}
+                <span 
+                    onClick={() => navigate('/login')} 
+                    style={{ color: 'blue', cursor: 'pointer', textDecoration: 'underline' }}
+                >
+                    Login
+                </span>
+            
+          </div>
         </form>
       </div>
       <div style={styles.footer}>
@@ -367,4 +359,3 @@ const Register = () => {
 };
 
 export default Register;
-

@@ -64,23 +64,23 @@ const EditUserProfileForm = () => {
 
     return (
         <div style={{marginLeft:"0px",backgroundColor: theme.palette.mode==="dark"?"#3C3D37":'#edeff0'}}>
-        <h2
+        <h3
                 style={{
-                    fontSize: '26px',
+                    
                     fontWeight: '600',
                     color: '#2196f3',
                     marginBottom: '10px',
                     textAlign: 'left',
-                    marginTop:'0px',
+                    marginTop:'10px',
                     marginLeft:"0px"
                 }}
             >
                 Edit Profile
-            </h2>
+            </h3>
         <form
             onSubmit={handleSubmit}
             style={{
-                maxWidth: '900px',
+                maxWidth: '850px',
                 margin: '30px auto',
                 padding: '30px',
                 backgroundColor: theme.palette.mode==="dark"?"black":'#ffffff',
@@ -103,13 +103,13 @@ const EditUserProfileForm = () => {
                 <div
                     key={index}
                     style={{
-                        marginBottom: '15px'
+                        marginBottom: '13px'
                     }}
                 >
                     <label
                         style={{
                             display: 'block',
-                            fontWeight: '600',
+                            fontWeight: '500',
                             marginBottom: '8px',
                             color:theme.palette.mode==="dark"?"white": '#555'
                         }}
@@ -124,10 +124,10 @@ const EditUserProfileForm = () => {
                         required={name === 'firstName' || name === 'lastName' || name === 'email'}
                         style={{
                             width: '100%',
-                            padding: '10px',
+                            padding: '8px',
                             border: '1px solid #ddd',
                             borderRadius: '6px',
-                            fontSize: '14px',
+                            fontSize: '12px',
                             color: '#333',
                             outline: 'none',
                             transition: 'border-color 0.3s ease',
@@ -144,13 +144,13 @@ const EditUserProfileForm = () => {
                 style={{
                     display: 'block',
                     width: '100%',
-                    padding: '12px 20px',
+                    padding: '10px 20px',
                     backgroundColor: '#2196f3',
                     color: '#ffffff',
                     border: 'none',
                     borderRadius: '6px',
-                    fontWeight: '600',
-                    fontSize: '16px',
+                    fontWeight: '500',
+                    fontSize: '14px',
                     cursor: 'pointer',
                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                     transition: 'all 0.3s ease'

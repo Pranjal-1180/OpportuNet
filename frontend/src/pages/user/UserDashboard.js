@@ -32,9 +32,9 @@ const UserDashboard = () => {
 
   return (
     <div style={{  backgroundColor: theme.palette.mode==="dark"?"#3C3D37":"#edeff0", color: "white",minHeight: "100vh",paddingLeft: "10px",paddingTop:"20px"}}>
-      <h2 style={{ paddingTop: "0px", color: "#219ff2", paddingBottom: "20px",marginTop:'0px',marginLeft:"0px" }}>
+      <h3 style={{ paddingTop: "0px", color: "#219ff2", paddingBottom: "20px",marginTop:'0px',marginLeft:"0px" }}>
         Dashboard
-      </h2>
+      </h3>
 
       <div
         style={{
@@ -63,7 +63,7 @@ const UserDashboard = () => {
       </div>
 
       <Box mt={2} style={{ color: "#7E60BF" }}>
-        <h3>Recruiters Who Have Messaged You:</h3>
+        <h4>Recruiters Who Have Messaged You:</h4>
         {error ? (
           <p>{error}</p>
         ) : (
