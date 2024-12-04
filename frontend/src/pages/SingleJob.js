@@ -65,17 +65,17 @@ const SingleJob = () => {
           <>
             {/* Main job details section */}
             <div style={{ flex: 3, padding: "20px", backgroundColor: cardBgColor, borderRadius: "10px", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
-              <h4 style={{ color: textColor, fontSize: "1.3rem", marginBottom: "15px" }}>{singleJob?.title}</h4>
-              <p style={{ color: textColor, fontSize: "1.1rem" }}>
+              <h4 style={{ color: textColor, fontSize: "1.1rem", marginBottom: "15px" }}>{singleJob?.title}</h4>
+              <p style={{ color: textColor, fontSize: "1rem" }}>
                 <strong>Salary:</strong> ${singleJob?.salary}
               </p>
-              <p style={{ color: textColor, fontSize: "1.1rem" }}>
+              <p style={{ color: textColor, fontSize: "1rem" }}>
                 <strong>Category:</strong> {singleJob?.jobType?.jobTypeName || "No category"}
               </p>
-              <p style={{ color: textColor, fontSize: "1.1rem" }}>
+              <p style={{ color: textColor, fontSize: "1rem" }}>
                 <strong>Location:</strong> {singleJob?.location}
               </p>
-              <p style={{ color: textColor, fontSize: "1.2rem", marginTop: "15px" }}>
+              <p style={{ color: textColor, fontSize: "0.8rem", marginTop: "15px" }}>
                 {singleJob?.description}
               </p>
               
@@ -83,8 +83,8 @@ const SingleJob = () => {
                 <button
                   onClick={applyForAJob}
                   style={{
-                    fontSize: "14px",
-                    padding: "12px 25px",
+                    fontSize: "11px",
+                    padding: "10px 23px",
                     backgroundColor: buttonBgColor,
                     color: buttonTextColor,
                     border: "none",
