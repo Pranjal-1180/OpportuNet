@@ -24,15 +24,13 @@ const AppliedJobDetail = () => {
   return (
     <div style={{ backgroundColor: bgColor }}>
       {/* <Navbar /> */}
-      <div style={{ height: "85vh", padding: "30px" }}>
+      <div style={{ height: "85vh", padding: "20px" }}>
         {loading ? (
           <LoadingBox />
         ) : (
           <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
             <div style={{ flex: 4, padding: "20px" }}>
-              <div
-                style={{ border: `1px solid ${borderColor}`, padding: "20px" }}
-              >
+             
                 <h3 style={{ color: textColor }}>
                   {singleJob && singleJob.title}
                 </h3>
@@ -53,10 +51,9 @@ const AppliedJobDetail = () => {
                 </p>
               </div>
             </div>
-          </div>
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
