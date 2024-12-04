@@ -58,7 +58,7 @@ const UserInfoDashboard = () => {
           
           fontWeight: "600",
           color: "#219ff2",
-          marginBottom: "30px",
+          marginBottom: "15px",
           textAlign: "left",
           marginTop: "20px",
           marginLeft: "0px",
