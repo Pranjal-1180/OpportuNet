@@ -88,6 +88,11 @@ const Register = () => {
       marginBottom: "20px", 
       marginTop:"10px"
     },
+    errorText: {
+    color: "red",
+    fontSize: "12px",
+    marginTop: "4px",
+  },
     
   };
 
